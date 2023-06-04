@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color:  #444444;
+}
+
+.header{
+    color: white;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: -8.5%;
+}
+
+form{
+    position: relative;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; 
+    height: 400px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.container1{
+    margin-left: 7%;
+    padding-top: 7%;
+}
+
+.container2{
+    margin-left: 7.8%;
+    padding-top: 4%;
+}
+
+.container3{
+    margin-left: 15%;
+    padding-top: 2.2%;
+}
+
+#new{
+
+    margin-left: 38%;
+    padding-top: 2.5%;
+}
+
+.submit_button{
+    font-size: large;
+    font-weight: bold;
+    width: 150px;
+    border-radius: 15px;
+    margin-top: 2.5%;
+    margin-left: 40%;
+}
+
+#fuzzy_algorithm{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    line-height: 120px;
+    font-size: large;
+    vertical-align: middle;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; 
+    height: 120px;
+    border-radius: 20px;
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.8),
+        rgba(255, 0, 0, 0) 70.71%
+      ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+#preloader{
+    padding: 350px 0;
+    text-align: center;
+}
+
+.fa-spinner{
+  color: white;
+}
