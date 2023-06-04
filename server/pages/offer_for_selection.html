@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <title>Cars</title>
+        <link rel="icon" href="/styles/media/Searchallwreckers-Car-Ford-Mustang.256.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/styles/offer.css"/>
+    </head>
+    <body>
+        <h1 class="header">Результаты запроса.</h1>
+        <p class="result">Найдено {{ .Quantity }} автомобилей.</p>
+        {{range $index, $car := .Cars}}
+        <a href="http://localhost:8080/selection/card/{{ len (printf "a%*s" $index "")}}"><div class="car_page">
+            <img src={{index .Offering.PhotoURLs 0}}>
+            <div class="name_and_price">{{ .Make }} {{ .Model }}, {{.Specification.Year}}<br>{{ .Offering.Price }} ₽</div>
+        </div></a>
+    {{end}} 
+    
+    <script src="/scripts/offer.js"></script>
+    <button class="jump_to_main_page two" onClick='location.href="http://localhost:8080/main"'>На главную страницу</button>
+
+    </body>
+</html> 

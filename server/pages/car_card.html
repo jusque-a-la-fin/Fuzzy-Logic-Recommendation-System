@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Car</title>
+    <link rel="icon" href="/styles/media/Searchallwreckers-Car-Ford-Mustang.256.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/car_card.css"/>
+    <link href="/scripts/lightboxed/lightboxed.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scripts/lightboxed/lightboxed.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  </head>
+  <body>
+    <h2 class="header">{{ .Name }}</h2>
+    <p class="price">{{ .Price }}</p>
+    <br><br>
+    <section id="slider">
+      <div class="container">
+        <div class="subcontainer">
+          <div class="slider-wrapper">
+            <div class="my-slider">
+              {{range $index, $image := .Images}}
+              <div>
+                <div class="slide">
+                     <img class="lightboxed slide-img" rel="group1" src={{$image}}>
+                </div>
+              </div>
+              {{end}}
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div id="controls">
+        <button class="pointer previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="pointer next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+    <div class="car_page">
+      <table class="tbl1">
+        <tr>
+          <td class="variable">Двигатель</td>
+          <td class="value">{{ index .Characteristics "Двигатель" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Мощность</td>
+          <td class="value">{{ index .Characteristics "Мощность" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Коробка передач</td>
+          <td class="value">{{ index .Characteristics "Коробка передач" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Привод</td>
+          <td class="value">{{ index .Characteristics "Привод" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Тип кузова</td>
+          <td class="value">{{ index .Characteristics "Тип кузова" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Цвет</td>
+          <td class="value">{{ index .Characteristics "Цвет" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Пробег, км</td>
+          <td class="value">{{ index .Characteristics "Пробег, км" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Руль</td>
+          <td class="value">{{ index .Characteristics "Руль" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Число мест</td>
+          <td class="value">{{ index .Characteristics "Число мест" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Поколение</td>
+          <td class="value">{{ index .Characteristics "Поколение" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Название комплектации</td>
+          <td class="value">{{ index .Characteristics "Название комплектации" }}</td>
+        </tr>
+      </table>
+      <table class="tbl2">
+        <tr>
+          <td class="variable">Время разгона 0-100 км/ч, с</td>
+          <td class="value">{{ index .Characteristics "Время разгона 0-100 км/ч, с" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Максимальная скорость, км/ч</td>
+          <td class="value">{{ index .Characteristics "Максимальная скорость, км/ч" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Используемое топливо</td>
+          <td class="value">{{ index .Characteristics "Используемое топливо" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Расход топлива в городском цикле, л/100 км</td>
+          <td class="value">{{ index .Characteristics "Расход топлива в городском цикле, л/100 км" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Расход топлива за городом, л/100 км</td>
+          <td class="value">{{ index .Characteristics "Расход топлива за городом, л/100 км" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Расход топлива в смешанном цикле, л/100 км</td>
+          <td class="value">{{ index .Characteristics "Расход топлива в смешанном цикле, л/100 км" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Максимальный крутящий момент, Н*м (кг*м) при об./мин.</td>
+          <td class="value">{{ index .Characteristics "Максимальный крутящий момент, Н*м (кг*м) при об./мин." }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Кондиционер</td>
+          <td class="value">{{ index .Characteristics "Кондиционер" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Объем багажника, л</td>
+          <td class="value">{{ index .Characteristics "Объем багажника, л" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Габариты кузова (Д x Ш x В), мм</td>
+          <td class="value">{{ index .Characteristics "Габариты кузова (Д x Ш x В), мм" }}</td>
+        </tr>
+        <tr>
+          <td class="variable">Клиренс (высота дорожного просвета), мм</td>
+          <td class="value">{{ index .Characteristics "Клиренс (высота дорожного просвета), мм" }}</td>
+        </tr>
+      </table>
+    </div>
+   
+    <script src="/scripts/car_card.js"></script>
+    
+  </body>
+</html>
+

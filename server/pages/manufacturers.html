@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <title>Cars</title>
+        <link rel="icon" href="/styles/media/Searchallwreckers-Car-Ford-Mustang.256.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/styles/manufacturers.css"/>
+    </head>
+    <body>
+        
+        <div class="backgroundImage"></div>
+      
+        <div class="question_frame question">Выберите страну(ы) производителя(ей)</div>
+
+        <button type="button" class="answer one" onclick="changeChoice('Германия', 0)">Германия</button>
+        <button type="button" class="answer two" onclick="changeChoice('Япония', 1)">Япония</button>
+        <button type="button" class="answer three" onclick="changeChoice('Россия', 2)">Россия</button>
+        <button type="button" class="answer four" onclick="changeChoice('Китай', 3)">Китай</button>
+        <button type="button" class="answer five" onclick="changeChoice('США', 4)">США</button>
+        <button type="button" class="answer six" onclick="changeChoice('Великобритания', 5)">Великобритания</button>
+        <button type="button" class="answer seven" onclick="changeChoice('Франция', 6)">Франция</button>
+        <button type="button" class="answer eight" onclick="changeChoice('Южная_Корея', 7)">Южная Корея</button>
+        <button type="button" class="answer nine" onclick="changeChoice('Другие', 8)">Другие</button>
+        <input type="image" src="/styles/media/ok.png" class="button_ok" onclick="sendRequest()">
+        <div class="loader"></div>
+        <script src="/scripts/manufacturers.js"></script>
+
+    </body>
+</html>

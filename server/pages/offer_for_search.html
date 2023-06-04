@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <title>Cars</title>
+        <link rel="icon" href="/styles/media/Searchallwreckers-Car-Ford-Mustang.256.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/offer.css"/>
+       
+        <style>
+          .underline {
+              text-decoration: underline;
+          }
+      </style>
+    </head>
+    <body>
+        <h1 class="header">Результаты запроса.</h1>
+        <p class="result">Найдено {{ .Quantity }} автомобилей.</p>
+        {{range $index, $car := .Cars}}
+        <a href="http://localhost:8080/search/card/{{ len (printf "a%*s" $index "")}}"><div class="car_page">
+            <img src={{index .Images 0}}>
+            <div class="name_and_price">{{ .Name }}<br>{{ .Price }}</div>
+        </div></a>
+    {{end}} 
+       
+    {{if .NotAnswered}}
+    <div class="question">
+      <form method="post">
+        <p class="center"><b>{{.QuestionPart1}}<u>{{.QuestionPart2}}</u>{{.QuestionPart3}}</b></p>
+        <div>{{.fuelConsumption}}</div>
+        {{range $index, $element := .PossibleAnswers}}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio{{$index}}" value="{{$element}}"{{if eq $index 0}} checked{{end}}>
+            <label class="form-check-label text-left" for="radio{{$index}}">
+              <b>{{$element}}</b>
+            </label>
+          </div>
+        {{end}}
+        <button type="submit" class="btn btn-primary ml-1.5 mt-3" id="answer_button" onclick="HideAnswer()"><b>Ответить</b></button>
+      </form>
+</div>
+{{end}}
+    
+    <script src="/scripts/offer.js"></script>
+   
+    <button class="jump_to_main_page two" onClick='location.href="http://localhost:8080/main"'>На главную страницу</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html> 

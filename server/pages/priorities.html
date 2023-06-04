@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <title>Cars</title>
+        <link rel="icon" href="/styles/media/Searchallwreckers-Car-Ford-Mustang.256.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/styles/priorities.css"/>
+    </head>
+    <body>
+        <div class="backgroundImage"></div>
+
+        <div class="question_frame question">Здравствуйте! Давайте подберём авто для вас. Расставьте в порядке приоритета следующие характеристики:</div>
+            
+        <button type="button" class="answer one" onclick="changeChoice('комфорт', 0)">
+            <span class="priority"></span> Комфорт</button> 
+            
+        <button type="button" class="answer two" onclick="changeChoice('экономичность', 1)">
+            <span class="priority"></span>Экономичность</button>
+
+        <button type="button" class="answer three" onclick="changeChoice('безопасность', 2)">
+            <span class="priority"></span>Безопасность</button> 
+            
+        <button type="button" class="answer four" onclick="changeChoice('динамика', 3)">
+            <span class="priority"></span>Динамика</button> 
+
+        <button type="button" class="answer five" onclick="changeChoice('управляемость', 4)">
+            <span class="priority"></span>Управляемость</button> 
+
+            
+        <input type="image" src="/styles/media/ok.png" class="button_ok" onclick="sendRequest()">
+          
+        <script src="/scripts/priorities.js"></script>
+    </body>
+</html>
