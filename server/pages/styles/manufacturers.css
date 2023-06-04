@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.backgroundImage{
+    background-image: url("media/cars1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} 
+
+
+.question_frame {
+    position: absolute;
+    top: 1%;
+    right: 32%;
+    width: 600px;
+    text-align: center;
+    line-height: 3.4em;
+    margin: 20px;
+    background-color: rgba(55, 101, 201, 0.6);
+    border: 8px solid #333;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: 23px;
+}
+
+
+
+.question_frame:before,
+.question_frame:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.question:before {
+    left: 30px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: #333 transparent transparent #333;
+}
+
+.question:after {
+    left: 38px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: rgba(55, 101, 201, 0.89) transparent transparent rgba(55, 101, 201, 0.89);
+}
+
+
+.answer{
+    text-align: center;
+    line-height: 1.5em;
+    margin: 20px;
+    background-color: rgba(55, 101, 201, 0.6);
+    border: 8px solid #333;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 15px;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.answer.one {
+    position: absolute;
+    top: 20%;
+    right: 55.5%;
+    width: 180px;
+}
+
+
+.answer.two {
+    position: absolute;
+    top: 20%;
+    right: 44.5%;
+    width: 200px;
+}
+
+.answer.three {
+    position: absolute;
+    top: 20%;
+    right: 32.0%;
+    width: 230px;
+}
+
+.answer.four {
+    position: absolute;
+    top: 30%;
+    right: 55%;
+    width: 190px;
+}
+
+.answer.five {
+    position: absolute;
+    top: 30%;
+    right: 46.2%;
+    width: 160px;
+}
+
+.answer.six {
+    position: absolute;
+    top: 30%;
+    right: 32.0%;
+    width: 265px;
+}
+
+.answer.seven {
+    position: absolute;
+    top: 40%;
+    right: 55.0%;
+    width: 190px;
+}
+
+.answer.eight {
+    position: absolute;
+    top: 40%;
+    right: 42.0%;
+    width: 240px;
+}
+
+.answer.nine {
+    position: absolute;
+    top: 40%;
+    right: 32.0%;
+    width: 185px;
+}
+
+
+
+.answer:hover{
+    background-color: rgba(0, 255, 0, 0.6);
+    border: 8px solid rgb(255, 255, 255);
+}
+
+.answer:active{
+    transform: scale(1.2);
+}
+
+.clicked{
+    background-color: rgba(255, 0, 0, 0.6);
+    border: 8px solid rgb(255, 208, 0);
+}
+
+.button_ok {
+    width: 106px;
+    height: 66px;
+    position: absolute;
+    top: 53.0%;
+    right: 46.5%;
+}
+
+.button_ok:active {
+    transform: scale(1.3);
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+   
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

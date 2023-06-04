@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.backgroundImage{
+    background-image: url("media/cars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.question_frame {
+    position: absolute;
+    top: 5%;
+    right: 32%;
+    width: 600px;
+    text-align: center;
+    line-height: 2.4em;
+    margin: 20px;
+    background-color: rgba(55, 101, 201, 0.6);
+    border: 8px solid #333;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: 23px;
+}
+
+
+.question_frame:before,
+.question_frame:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+  }
+
+.question:before {
+    left: 30px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: #333 transparent transparent #333;
+}
+
+.question:after {
+    left: 38px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: rgba(55, 101, 201, 0.89) transparent transparent rgba(55, 101, 201, 0.89);
+}
+
+
+
+.button1 {
+    background-color: #0099cc;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 17%;
+    right: 38%;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+ 
+
+.button4 {border-radius: 12px;} 
+
+
+.button1:hover{
+    background: #a7b612;
+    color: #555;
+    letter-spacing: 4px;
+}
+
+
+.lowest_price{
+    position: absolute;
+    top: 23%;
+    right: 35%;
+     /* размер шрифта для надписей около поля ввода */
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.highest_price{
+    position: absolute;
+    top: 30%;
+    right: 35%;
+    /* размер шрифта для надписей около поля ввода */
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.label_for_lowest_price{
+    position:absolute
+}
+
+.deviation{
+    position: absolute;
+    top: 37%;
+    right: 30.3%;
+     /* размер шрифта для надписей около поля ввода */
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    width: 530px;
+}
+
+/*характеристики поля ввода*/
+input[type="number"]
+{
+  width: 55%;
+  font-size:23px;
+}
+
+.button_ok {
+    width: 85px;
+    height: 50px;
+    position: absolute;
+    top: 37%;
+    right: 47.5%;
+}
+
+.button_ok:active {
+    transform: scale(1.3);
+}

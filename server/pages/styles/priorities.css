@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.backgroundImage{
+    background-image: url("media/car_lights.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} 
+
+
+.question_frame {
+    position: absolute;
+    top: 1%;
+    right: 34%;
+    width: 600px;
+    text-align: center;
+    line-height: 1.8em;
+    margin: 20px;
+    background-color: rgba(55, 101, 201, 0.6);
+    border: 8px solid #333;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 10px;
+    color: black;
+    font-size: 23px;
+}
+
+
+
+.question_frame:before,
+.question_frame:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.question:before {
+    left: 30px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: #333 transparent transparent #333;
+}
+
+.question:after {
+    left: 38px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: rgba(55, 101, 201, 0.89) transparent transparent rgba(55, 101, 201, 0.89);
+}
+
+
+.answer{
+    text-align: center;
+    line-height: 1.5em;
+    margin: 20px;
+    background-color: rgba(55, 101, 201, 0.6);
+    border: 8px solid #333;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 15px;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.answer.one {
+    position: absolute;
+    top: 24%;
+    right: 42.6%;
+    width: 300px;
+}
+
+
+.answer.two {
+    position: absolute;
+    top: 34.5%;
+    right: 42.6%;
+    width: 300px;
+}
+
+.answer.three {
+    position: absolute;
+    top: 45%;
+    right: 42.6%;
+    width: 300px;
+}
+
+.answer.four {
+    position: absolute;
+    top: 55.5%;
+    right: 42.6%;
+    width: 300px;
+}
+
+.answer.five {
+    position: absolute;
+    top: 66%;
+    right: 42.6%;
+    width: 300px;
+}
+
+.answer.six {
+    position: absolute;
+    top: 76.5%;
+    right: 42.6%;
+    width: 300px;
+}
+
+.answer.seven {
+    position: absolute;
+    top: 40%;
+    right: 54.0%;
+    width: 300px;
+}
+
+.indiffirent_answer {
+    position: absolute;
+    top: 40%;
+    right: 43.0%;
+    width: 205px;
+}
+
+.answer:hover{
+    background-color: rgba(0, 255, 0, 0.6);
+    border: 8px solid rgb(255, 255, 255);
+}
+
+.answer:active{
+    transform: scale(1.2);
+}
+
+.clicked{
+    background-color: rgba(255, 0, 0, 0.6);
+    border: 8px solid rgb(255, 208, 0);
+}
+
+.button_ok {
+    width: 110px;
+    height: 70px;
+    position: absolute;
+    top: 81.0%;
+    right: 48.8%;
+}
+
+.button_ok:active {
+    transform: scale(1.3);
+}
+
+.priority{
+    position: absolute;
+    top: 25%;
+    right: 110%;
+    font-weight: bolder;
+    font-size: 40px;
+    color: red;
+}
